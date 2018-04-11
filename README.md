@@ -7,7 +7,7 @@ This test is language agnostic, use whatever you feel best illustrates your styl
 ## Test
 You are tasked with building a real-time, geo-aware inventory system.  The service should return the total available quantity of 1 test product to a consumer. The quantity of that product is based on the sum total of items all drivers have on-hand in a defined region. The region is defined in the corresponding GeoJSON file in this repo. The region has a defined Polygon, with Points representing drivers.  You can create whatever data structures you see fit to solve the problem.
 
-* Use [Redis](https://redis.io/clients) as a data store to help you
+* Use [Redis](https://redis.io/clients) as a data store to help you (test server credentials in your instructional email)
 * Each driver has an `inventory` property that describes the amount they currently have.   
 * You must create at least one API endpoint that accepts a `(application/json)` endcoded request and returns a JSON response below:
 
