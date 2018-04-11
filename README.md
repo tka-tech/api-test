@@ -8,8 +8,8 @@ This test is language agnostic, use whatever you feel best illustrates your styl
 ## Test
 You are tasked with building a real-time, geo-aware inventory system.  The service should return the total available quantity of 1 test product to a consumer. The quantity of that product is based on the sum total of items all drivers have on-hand in a defined region. The region is defined in the corresponding GeoJSON file in this repo. The region has a defined Polygon, with Points representing drivers.  You can create whatever data structures you see fit to solve the problem.
 
-* Use [https://redis.io/clients] (Redis) as a data store to help you
-* Each driver has a property `inventory` that describes the amount they currently have.   
+* Use [Redis](https://redis.io/clients) as a data store to help you
+* Each driver has an `inventory` property that describes the amount they currently have.   
 * You must create at least one API endpoint that accepts a `(application/json)` endcoded request and returns a JSON response below:
 
 ```
@@ -25,18 +25,18 @@ Response:
 ```
 
 ## Tools
-You can load the file into [https://geojson.io] to visualize your data
+You can load the file into https://geojson.io to visualize your data
 
 
 ## Passing Requirements:
 1. Your server runs
-2. API Gives the correct level of inventory given the following lat/long point
+2. API Gives the correct level of inventory given the following lng/lat point
 3. Given a different initial data set, where some drivers do not reside inside the defined region, the inventory quantity should still be correct (sum of drivers inside the region).
 4. Given a point outside the defined region, the API should return an error: {"message":"unavailable at this location"}
 
 ## Bonus:
 1. Write a test(s) for your solution
-2. Make your API product agnostic
+2. Make your API product/sku agnostic
 3. Make endpoint(s) handling the updating of driver positions.
 4. Use any GEO command in redis: [https://redis.io/commands#geo]
 5. Give examples of how your solution may not scale well, and what you might do to improve it
