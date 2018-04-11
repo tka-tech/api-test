@@ -10,9 +10,15 @@ You are tasked with building a real-time, geo-aware inventory system.  The servi
 
 * Use [https://redis.io/clients] (Redis) as a data store to help you
 * Each driver has a property `inventory` that describes the amount they currently have.   
-* You must create at least one API endpoint the returns JSON in the format below:
+* You must create at least one API endpoint that accepts a `(application/json)` endcoded request and returns a JSON response below:
 
 ```
+Request:
+{
+  "point":[{lng},{lat}]
+}
+
+Response:
 {
   "sku_1":{quantity} //where quantity is the correct amount
 }
